@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plutonium</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+
+body{
+
+background:#090909;
+overflow:hidden;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+
+}
+
+/* Glow */
+
+body::before{
+content:"";
+position:absolute;
+width:350px;
+height:350px;
+background:#ff5a00;
+filter:blur(170px);
+opacity:.18;
+top:-100px;
+left:50%;
+transform:translateX(-50%);
+}
+
+.container{
+
+width:100%;
+max-width:360px;
+padding:22px;
+
+}
+
+.card{
+
+background:rgba(18,18,18,.95);
+border:1px solid rgba(255,100,0,.25);
+border-radius:24px;
+padding:28px 24px;
+
+backdrop-filter:blur(20px);
+
+box-shadow:
+0 0 35px rgba(255,90,0,.08),
+0 0 0 1px rgba(255,90,0,.08);
+
+}
+
+/* Logo */
+
+.logo{
+
+display:flex;
+justify-content:center;
+margin-bottom:22px;
+
+}
+
+.logo img{
+
+width:115px;
+height:115px;
+border-radius:50%;
+box-shadow:
+0 0 35px rgba(255,90,0,.4);
+
+}
+
+h1{
+
+text-align:center;
+color:#fff;
+font-size:28px;
+font-weight:700;
+margin-bottom:5px;
+
+}
+
+.subtitle{
+
+text-align:center;
+color:#8d8d8d;
+font-size:14px;
+margin-bottom:28px;
+
+}
+
+.input{
+
+width:100%;
+height:56px;
+
+background:#0f0f0f;
+
+border:1px solid #2c2c2c;
+
+border-radius:16px;
+
+padding:0 18px;
+
+font-size:15px;
+
+color:white;
+
+outline:none;
+
+transition:.25s;
+
+}
+
+.input:focus{
+
+border-color:#ff5a00;
+
+box-shadow:
+0 0 18px rgba(255,90,0,.35);
+
+}
+
+.button{
+
+margin-top:18px;
+
+width:100%;
+height:56px;
+
+border:none;
+
+border-radius:16px;
+
+background:linear-gradient(135deg,#ff6a00,#ff3700);
+
+color:white;
+
+font-size:16px;
+
+font-weight:700;
+
+cursor:pointer;
+
+transition:.2s;
+
+box-shadow:
+0 0 25px rgba(255,90,0,.35);
+
+}
+
+.button:active{
+
+transform:scale(.98);
+
+}
+
+.info{
+
+margin-top:18px;
+
+text-align:center;
+
+font-size:13px;
+
+color:#777;
+
+}
+
+.footer{
+
+margin-top:25px;
+
+text-align:center;
+
+font-size:13px;
+
+color:#555;
+
+}
+
+.footer span{
+
+color:#ff5a00;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="card">
+
+<div class="logo">
+<img src="logo.png">
+</div>
+
+<h1>Plutonium</h1>
+
+<div class="subtitle">
+Введите лицензионный ключ
+</div>
+
+<input
+class="input"
+type="text"
+placeholder="License Key">
+
+<button class="button">
+Авторизация
+</button>
+
+<div class="info">
+Проверка ключа будет выполнена после подключения сервера.
+</div>
+
+<div class="footer">
+Powered by <span>Plutonium</span>
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
